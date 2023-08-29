@@ -1,0 +1,288 @@
+$primary-color: #585292;
+$secondary-color: #FFFFFF;
+$font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+.container {
+    width: 518px;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-container {
+    margin-top: 103px;
+    height: 123px;
+    background-color: #E07C7C;
+    border-radius: 20px;
+}
+
+.progress-text {
+    color: $secondary-color;
+    font-family: $font-family;
+    font-size: 28px;
+    text-align: left;
+    padding-left: 20px;
+    height: 18px;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-completed {
+    color: #EBB9B8;
+    font-family: $font-family;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.container-text-task {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.tasks-text {
+    color: #000000;
+    font-family: $font-family;
+    font-size: 24px;
+    text-align: left;
+    height: 18px;
+}
+
+.filter-dropdown {
+    position: relative;
+    width: 110px;
+    height: 29px;
+    font-family: $font-family;
+    font-size: 13px;
+    background-color: $secondary-color;
+    margin-left: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.filter-container {
+    position: relative;
+    display: inline-block;
+}
+
+.filter-list {
+    position: absolute;
+    width: 110px;
+    font-family: $font-family;
+    font-size: 14px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    top: -20px;
+    right: -60px;
+    min-width: 110px;
+}
+
+.filter-list li {
+    padding: 8px 12px;
+    margin-top: 4px;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+    color: #2E2E2E;
+}
+
+.filter-list li:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    width: 70%;
+    border-radius: 8px;
+}
+
+.filter-text {
+    flex-grow: 1;
+    padding-left: 8px;
+}
+
+.filter-icon-container {
+    margin-left: 15px;
+}
+
+.filter-icon {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.container-task {
+    margin-top: 20px;
+    height: 46px;
+    background-color: $secondary-color;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tasks-text-detail {
+    color: #2E2E2E;
+    font-family: $font-family;
+    font-size: 16px;
+    text-align: left;
+}
+
+.edit-container {
+    display: flex;
+    align-items: center;
+}
+
+.edit-task {
+    border: none;
+    height: 40px;
+    width: 90%;
+    color: #2E2E2E;
+    font-family: $font-family;
+    font-size: 16px;
+    outline: none;
+}
+
+.save-button {
+    margin-right: 8px;
+    width: 64px;
+    height: 36px;
+    font-family: $font-family;
+    font-size: 14px;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.containercheckbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: $secondary-color;
+    border: 2px solid $primary-color;
+    border-radius: 6px;
+}
+
+.containercheckbox input:checked~.checkmark {
+    background-color: $primary-color;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.containercheckbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.containercheckbox .checkmark:after {
+    left: 9px;
+    top: 3px;
+    width: 4px;
+    height: 10px;
+    border: solid $secondary-color;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.completed-task {
+    color: #A9A9A9;
+    text-decoration: line-through;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 14px;
+}
+
+.dropdown-icon {
+    cursor: pointer;
+    color: #9796A8;
+}
+
+.dropdown-icon.active {
+    cursor: pointer;
+    position: relative;
+
+}
+
+.menu-list {
+    position: absolute;
+    width: 111px;
+    height: 81px;
+    top: 7px;
+    right: -10px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    padding: 0;
+    list-style: none;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+}
+
+.menu-list li {
+    padding: 8px;
+    margin: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.menu-list li:hover {
+    background-color: $primary-color;
+    color: $secondary-color;
+    width: 80%;
+    border-radius: 8px;
+}
+
+.input-task {
+    border: none;
+    height: 46px;
+    width: 90%;
+    color: #2E2E2E;
+    font-family: $font-family;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-task::placeholder {
+    color: #A0A0A0;
+    opacity: 0.7;
+}
+
+
